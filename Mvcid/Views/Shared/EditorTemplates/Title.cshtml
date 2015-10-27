@@ -1,0 +1,26 @@
+﻿@model int?
+
+@(Html.Kendo().DropDownList()
+          .Name("TitleId")
+          .OptionLabel("Select title...")
+          .HtmlAttributes(new { style = "width: 100%" })
+          .DataTextField("Text")
+          .DataValueField("Value")
+          .Events(e => e.Change("change"))
+          .BindTo(new List<SelectListItem>() {
+              new SelectListItem() {
+                  Text = "Mr",
+                  Value = "1"
+              },
+              new SelectListItem() {
+                  Text = "Mrs",
+                  Value = "2"
+              },
+              new SelectListItem() {
+                  Text = "Ms",
+                  Value = "3"
+              }
+          })
+)
+
+
